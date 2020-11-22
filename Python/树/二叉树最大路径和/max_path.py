@@ -1,3 +1,7 @@
+'''
+二叉树最大路径和，不一定过节点
+'''
+
 class Node(object):
     def __init__(self, value, left=None, right=None):
         self.value = value
@@ -18,9 +22,10 @@ def max_path(root):
     if right > 0:
         val += right
     res = max(res, val)
-    return max(root.value, max(root.value + left, root.value + right))
+    return root.value + max(left, right)
 
 global res
 res = -100000
 
 print(max_path(tree))
+print(res)
