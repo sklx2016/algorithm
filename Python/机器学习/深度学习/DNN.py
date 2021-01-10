@@ -5,6 +5,7 @@ import numpy
 import sys
 from PIL import Image
 
+
 #载入图像，并将其转换为灰度图
 img = skimage.data.chelsea()
 img = skimage.color.rgb2gray(img)
