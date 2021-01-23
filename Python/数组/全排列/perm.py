@@ -1,3 +1,7 @@
+'''
+递归+回溯
+'''
+
 
 #方法一：
 def perm(array, start, end):
@@ -15,7 +19,6 @@ def perm(array, start, end):
 count = 0
 print(perm([1, 2, 3, 4], 0, 4))
 print(count)
-
 
 
 #方法二：
@@ -36,7 +39,6 @@ print(perm2([1, 2, 3, 4], res_cur, res))
 
 
 #含有重复数字的全排列
-
 
 def perm3(array, res_cur, res, used):
     if len(res_cur) == len(array):
