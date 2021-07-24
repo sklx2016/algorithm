@@ -1,4 +1,4 @@
-#DFS
+#递归+回溯
 
 class solution(object):
     def __init__(self, n):
@@ -22,6 +22,7 @@ class solution(object):
 
     def valid(self, record, i, m):
         for k in range(i):
+            # 检验是否为同列 或者 同对角线（行-行 = 列-列）
             if record[k] == m or abs(i - k) == abs(m - record[k]):
                 return False
         return True
@@ -46,7 +47,7 @@ def valid(i, j, record):
 
 
 
-a = solution(6)
+a = solution(4)
 print(a.NQueens())
 
 
