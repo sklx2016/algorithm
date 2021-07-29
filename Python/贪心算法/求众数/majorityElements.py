@@ -22,7 +22,7 @@ def majorityElements(array):
 			cnt = 1
 		elif num == res:
 			cnt += 1
-		else：
+		else:
 			cnt -= 1
 
 
