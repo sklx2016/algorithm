@@ -11,17 +11,18 @@ leetcode 200
 '''
 def numIslands(grid):
 	if len(grid) == 0:
-		retrun 0
+		return 0
 	cnt = 0
 	for row in range(len(grid)):
 		for col in range(len(grid[0])):
 			if grid[row][col] == 1:
 				cnt += 1
+				DFS(grid, row, col)
 
 
 def DFS(grid, row, col):
 	if row < 0 or row >= len(grid) or col < 0 or col >= len(grid[0]) or grid[row][col] == 0:
-		retrun
+		return
 	grid[row][col] = 0
 	DFS(grid, row - 1, col)
 	DFS(grid, row + 1, col)
