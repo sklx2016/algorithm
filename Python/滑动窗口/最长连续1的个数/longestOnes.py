@@ -8,13 +8,13 @@
 
 def longestOnes(array, K):
     l, r, cnt0, res = 0, 0, 0, 0
-    while l < r :
+    while l < r:
         if not array[r]:
             cnt0 += 1
             while cnt0 > K and l < r:
                 if not array[l]:
-                    l += 1
                     cnt0 -= 1
+                l += 1
         res = max(res, r - l + 1)
         r += 1
     return res
